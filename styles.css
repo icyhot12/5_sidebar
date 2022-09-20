@@ -5,28 +5,96 @@ html,body {
 }
 
 body {
+    background-color: rgb(196, 217, 231);
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 10px;
 }
 
-button {
+.sidebar-toggle {
+    display: flex;
+    height: fit-content;
+    padding-right: 10px;
+}
+
+div.sidebar-header > button {
     border: none;
-    background-color: white
+    background-color: white;
+    cursor: pointer;
 }
 
 .sidebar {
+    background-color: white;
     display: flex;
     flex-direction: column;
+    transform: translate(-100%);
+    transition: 1s;
 }
 
 .sidebar-header {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 4rem;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.sidebar-toggle {
+.main-links {
+    padding-top: 1rem;
+    padding-left: 0;
+    margin: 0;
+}
+
+ul.main-links > li {
+    font-size: 1.3rem;
+    list-style-type: none;
+    height: 3rem;
+    background-color: white;
+    padding-left: 1rem;
+    padding-top: 10px;
+}
+
+ul.main-links > li:hover {
+    background-color: lightskyblue;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+}
+
+.close-btn {
+    color: rgb(203, 29, 29);
+}
+
+ul.social-icons > li {
+    background-color: white;
+    list-style-type: none;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 0;
+    margin-top: auto;
+    padding-bottom: 10px;
+}
+
+button {
+    background-color: rgb(196, 217, 231);
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    transform: rotate(720deg);
+    transition: 0.2s;
+}
+
+.hide {
+    transform: translate(0);
 }
